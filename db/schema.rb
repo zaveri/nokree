@@ -12,55 +12,55 @@
 ActiveRecord::Schema.define(:version => 20100731041912) do
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "companies", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "email"
-    t.integer  "listing_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name",       :null => false
+    t.string   "url",        :null => false
+    t.string   "email",      :null => false
+    t.integer  "listing_id", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "jobs", :force => true do |t|
-    t.string   "location"
-    t.string   "position"
-    t.string   "perks"
-    t.string   "description"
-    t.string   "how"
-    t.integer  "listing_id"
-    t.string   "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "location",    :null => false
+    t.string   "position",    :null => false
+    t.string   "perks",       :null => false
+    t.string   "description", :null => false
+    t.string   "how",         :null => false
+    t.integer  "listing_id",  :null => false
+    t.string   "category_id", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "kinds", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "listings", :force => true do |t|
-    t.integer  "kind_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "kind_id",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                     :limit => 40
-    t.string   "name",                      :limit => 100, :default => ""
-    t.string   "email",                     :limit => 100
-    t.string   "crypted_password",          :limit => 40
-    t.string   "salt",                      :limit => 40
-    t.boolean  "admin"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "remember_token",            :limit => 40
-    t.datetime "remember_token_expires_at"
+    t.string   "login",                     :limit => 40,                  :null => false
+    t.string   "name",                      :limit => 100, :default => "", :null => false
+    t.string   "email",                     :limit => 100,                 :null => false
+    t.string   "crypted_password",          :limit => 40,                  :null => false
+    t.string   "salt",                      :limit => 40,                  :null => false
+    t.boolean  "admin",                                                    :null => false
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
+    t.string   "remember_token",            :limit => 40,                  :null => false
+    t.datetime "remember_token_expires_at",                                :null => false
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
