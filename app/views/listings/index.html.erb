@@ -1,7 +1,0 @@
-<% form_tag listings_path, :method => 'get' do%>
-	<% @categories.each do |category| %>
-		<%= category_list_item(category, @selected_categories)%>
-	<% end %>
-	<%= submit_tag 'Filter'%>
-	<%= link_to 'Refresh Filter', listings_path%>
-<% end %>
