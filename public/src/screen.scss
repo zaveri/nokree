@@ -113,6 +113,7 @@ body{
 		font-size : $base-font-size * 1.2;
 		font-weight : 100;
 	}
+	border-bottom: 1px solid #A3A3A3;
 }
 #listings{
 	@include dark-on-light;
