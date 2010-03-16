@@ -1,0 +1,43 @@
+(in /home/ethan/Webapps/nokree)
+                  logout        /logout                             {:controller=>"sessions", :action=>"destroy"}
+                   login        /login                              {:controller=>"sessions", :action=>"new"}
+                register        /register                           {:controller=>"users", :action=>"create"}
+                  signup        /signup                             {:controller=>"users", :action=>"new"}
+                   users GET    /users(.:format)                    {:controller=>"users", :action=>"index"}
+                         POST   /users(.:format)                    {:controller=>"users", :action=>"create"}
+                new_user GET    /users/new(.:format)                {:controller=>"users", :action=>"new"}
+               edit_user GET    /users/:id/edit(.:format)           {:controller=>"users", :action=>"edit"}
+                    user GET    /users/:id(.:format)                {:controller=>"users", :action=>"show"}
+                         PUT    /users/:id(.:format)                {:controller=>"users", :action=>"update"}
+                         DELETE /users/:id(.:format)                {:controller=>"users", :action=>"destroy"}
+             new_session GET    /session/new(.:format)              {:controller=>"sessions", :action=>"new"}
+            edit_session GET    /session/edit(.:format)             {:controller=>"sessions", :action=>"edit"}
+                 session GET    /session(.:format)                  {:controller=>"sessions", :action=>"show"}
+                         PUT    /session(.:format)                  {:controller=>"sessions", :action=>"update"}
+                         DELETE /session(.:format)                  {:controller=>"sessions", :action=>"destroy"}
+                         POST   /session(.:format)                  {:controller=>"sessions", :action=>"create"}
+filter_by_genre_listings GET    /listings/filter_by_genre(.:format) {:controller=>"listings", :action=>"filter_by_genre"}
+                listings GET    /listings(.:format)                 {:controller=>"listings", :action=>"index"}
+                         POST   /listings(.:format)                 {:controller=>"listings", :action=>"create"}
+             new_listing GET    /listings/new(.:format)             {:controller=>"listings", :action=>"new"}
+            edit_listing GET    /listings/:id/edit(.:format)        {:controller=>"listings", :action=>"edit"}
+                 listing GET    /listings/:id(.:format)             {:controller=>"listings", :action=>"show"}
+                         PUT    /listings/:id(.:format)             {:controller=>"listings", :action=>"update"}
+                         DELETE /listings/:id(.:format)             {:controller=>"listings", :action=>"destroy"}
+              categories GET    /categories(.:format)               {:controller=>"categories", :action=>"index"}
+                         POST   /categories(.:format)               {:controller=>"categories", :action=>"create"}
+            new_category GET    /categories/new(.:format)           {:controller=>"categories", :action=>"new"}
+           edit_category GET    /categories/:id/edit(.:format)      {:controller=>"categories", :action=>"edit"}
+                category GET    /categories/:id(.:format)           {:controller=>"categories", :action=>"show"}
+                         PUT    /categories/:id(.:format)           {:controller=>"categories", :action=>"update"}
+                         DELETE /categories/:id(.:format)           {:controller=>"categories", :action=>"destroy"}
+                   kinds GET    /kinds(.:format)                    {:controller=>"kinds", :action=>"index"}
+                         POST   /kinds(.:format)                    {:controller=>"kinds", :action=>"create"}
+                new_kind GET    /kinds/new(.:format)                {:controller=>"kinds", :action=>"new"}
+               edit_kind GET    /kinds/:id/edit(.:format)           {:controller=>"kinds", :action=>"edit"}
+                    kind GET    /kinds/:id(.:format)                {:controller=>"kinds", :action=>"show"}
+                         PUT    /kinds/:id(.:format)                {:controller=>"kinds", :action=>"update"}
+                         DELETE /kinds/:id(.:format)                {:controller=>"kinds", :action=>"destroy"}
+                    root        /                                   {:controller=>"listings", :action=>"index"}
+                                /:controller/:action/:id            
+                                /:controller/:action/:id(.:format)  

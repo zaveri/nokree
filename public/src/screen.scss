@@ -1,0 +1,141 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "base";
+@import "border-radius";
+@import "compass/css3/columns";
+
+@mixin pretty-text {
+	font-family : $ideal-font $alt-font;
+	font-size : $base-font-size;
+	p { 
+		@include padding(1); 
+		line-height : 1.3em;
+		font-weight : $readable-weight;
+	}
+}
+@mixin light-on-dark {
+	color: $light-font;
+	background-color: $dark-background;
+	h1,h2,h3 { color : darken($light-font, 10%); }
+}
+
+@mixin dark-on-light {
+	color : $dark-font;
+	background-color : $content-background;
+	h1,h2,h3 { color : lighten($dark-font, 10%); }
+}
+@mixin side-border($w,$c) {
+	border-right: $w solid $c;
+	border-left: $w solid $c;
+}
+@mixin height-pad($i){
+	padding-top : $i;
+	padding-bottom : $i;
+}
+@mixin side-pad($i) {
+	padding-right : $i;
+	padding-left : $i;
+}
+@mixin padding($i) { padding: $i * 5; }
+@mixin centered {
+	margin : 0px auto;
+}
+
+body{
+	@include pretty-text;
+	background-color : $primary-background;
+}
+#body-top{
+	position:absolute;
+	width:100%;
+	height:350px;
+	top:$header-height;
+	background-color : darken($primary-background,1.5%);
+	z-index:-1;
+}
+@for $i from 1 through 6 {
+	h#{$i} { 
+		@include height-pad(10px);
+		font-weight: 200;
+		font-size : 100% + (6 - $i) * 125% / 5;
+	}
+}
+.highlight{
+	background-color: $highlight;
+}
+#header {
+	width: 100%;
+	height: $header-height;
+	background-color : $dark-background;
+}
+#footer {
+	width : 100%;
+	height : $footer-height;
+}
+#content-window {
+	@include centered;
+	@include dark-on-light;
+	@include side-border($border-width,darken($content-background,2%));
+	p, h1, h2, h3, h4 { 
+		@include side-pad(2px); 
+		@include height-pad(10px);
+	}
+	width : $page-width;
+	padding-bottom: 50px;
+}
+#content-border{
+	@include centered;
+	@include side-border($border-width / 3,darken($primary-background,5%));
+	width : $page-width + (2 * $border-width);
+}
+#two-column{
+	@include column-count(2);
+	p { @include side-pad(0px); }
+	@include side-pad(100px);
+	@include height-pad(10px);
+}
+#canvas{
+	@include centered;
+	width:500px;
+}
+#page-title{
+		@include height-pad(10px);
+	h1{
+		text-align : center;
+		font-size : $base-font-size * 4;
+		font-weight : 100;
+	}
+	h2{
+		text-align : center;
+		font-size : $base-font-size * 1.2;
+		font-weight : 100;
+	}
+}
+#listings{
+	@include dark-on-light;
+	float : left;
+	width : 2 * ($page-width / 3);
+}
+#listing{
+	@include side-pad(10px);
+}
+#side-nav{
+	h1,h2,h3,h4,h5,h6{
+		text-align: center;
+	}
+	float: left;
+	width : $page-width / 3;
+}
+#clear{
+	clear : both;
+}
+#ad-box{
+	@include centered;
+	width : 95%;
+	background-color : $highlight;
+	height : 300px;
+	text-align : center;
+}
