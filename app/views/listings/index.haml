@@ -1,0 +1,32 @@
+#listings
+	%hr
+	- @listings.each_index do |i|
+		- l = @listings[i]
+		- if i % 2 == 0
+			- color = "background-color:#E2E1E1"
+			- color = "background-color:#E9E9E9"
+			- classs = ""
+		- else
+			- color = "#DDD"
+			- color = "#BBBABA"
+			- color = "background-color:#C2B580;border-top:3px solid #9E9262;border-bottom:3px solid #9E9262"
+			- classs = "highlight"
+		#listing{:class=>"#{classs}"}
+			%h5 
+				= link_to l.job.position, :controller => :listings, :action => :show, :id => l.id
+			%h6
+				Employer: 
+				= l.company.name
+			%p
+				= l.job.description
+#side-nav
+	%br
+	#ad-box
+		%h5 Side-bar goes here
+		%p Content and whatnot
+	%br
+	%br
+	#ad-box
+		%h5 Advertisements and more...
+		%p Pictures or whatever
+#clear
