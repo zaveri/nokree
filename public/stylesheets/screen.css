@@ -68,7 +68,7 @@ body {
   font-size: 20px;
   background-color: #46914f;
 }
-/* line 13, ../src/screen.scss */
+/* line 12, ../src/screen.scss */
 body p {
   padding: 5;
   line-height: 1.3em;
@@ -161,7 +161,7 @@ h6 {
   width: 800px;
   padding-bottom: 50px;
 }
-/* line 28, ../src/screen.scss */
+/* line 27, ../src/screen.scss */
 #content-window h1, #content-window h2, #content-window h3 {
   color: #2b2b2b;
 }
@@ -230,7 +230,7 @@ h6 {
   float: left;
   width: 533.333px;
 }
-/* line 28, ../src/screen.scss */
+/* line 27, ../src/screen.scss */
 #listings h1, #listings h2, #listings h3 {
   color: #2b2b2b;
 }
@@ -240,27 +240,42 @@ h6 {
   padding-right: 10px;
   padding-left: 10px;
 }
+/* line 125, ../src/screen.scss */
+#listing h5 {
+  float: left;
+}
+/* line 128, ../src/screen.scss */
+#listing h6 {
+  position: relative;
+  float: right;
+  right: 10px;
+  top: 3px;
+}
+/* line 134, ../src/screen.scss */
+#listing p {
+  float: left;
+}
 
-/* line 126, ../src/screen.scss */
+/* line 138, ../src/screen.scss */
 #side-nav {
   float: left;
   width: 266.667px;
 }
-/* line 127, ../src/screen.scss */
+/* line 139, ../src/screen.scss */
 #side-nav h1, #side-nav h2, #side-nav h3, #side-nav h4, #side-nav h5, #side-nav h6 {
   text-align: center;
 }
 
-/* line 133, ../src/screen.scss */
+/* line 145, ../src/screen.scss */
 #clear {
   clear: both;
 }
 
-/* line 136, ../src/screen.scss */
+/* line 148, ../src/screen.scss */
 #ad-box {
   margin: 0px auto;
   width: 95%;
-  background-color: #c5d6d2;
+  background-color: #b6cbc6;
   height: 300px;
   text-align: center;
 }

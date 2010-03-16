@@ -5,14 +5,14 @@
 			- classs = ""
 		- else
 			- classs = "highlight"
-		#listing{:class=>"#{classs}"}
+		#listing{:class => "#{classs}"}
 			%h5 
 				= link_to l.job.position, :controller => :listings, :action => :show, :id => l.id
 			%h6
-				Employer: 
 				= l.company.name
 			%p
 				= l.job.description
+			#clear
 #side-nav
 	%br
 	#ad-box

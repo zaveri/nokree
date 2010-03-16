@@ -6,7 +6,6 @@
 		<%= listing_form.label :kind %><br/>
 		<%= listing_form.select( "kind_id", Kind.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
 	</p>
-	<%= listing_form.hidden_field "start", {:value => Time.now} %>
 	
 	<h2>Company Information</h2>
 	<% listing_form.fields_for :company do |company_form| %>

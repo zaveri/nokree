@@ -6,7 +6,6 @@
 @import "base";
 @import "border-radius";
 @import "compass/css3/columns";
-
 @mixin pretty-text {
 	font-family : $ideal-font $alt-font;
 	font-size : $base-font-size;
@@ -27,6 +26,7 @@
 	background-color : $content-background;
 	h1,h2,h3 { color : lighten($dark-font, 10%); }
 }
+
 @mixin side-border($w,$c) {
 	border-right: $w solid $c;
 	border-left: $w solid $c;
@@ -122,6 +122,18 @@ body{
 }
 #listing{
 	@include side-pad(10px);
+	h5 { 
+		float : left; 
+	}
+	h6 {
+		position : relative;
+		float : right;
+		right : 10px;
+		top : 3px;
+	}
+	p {
+		float : left;
+	}
 }
 #side-nav{
 	h1,h2,h3,h4,h5,h6{
@@ -136,7 +148,7 @@ body{
 #ad-box{
 	@include centered;
 	width : 95%;
-	background-color : $highlight;
+	background-color : darken($highlight, 5%);
 	height : 300px;
 	text-align : center;
 }
