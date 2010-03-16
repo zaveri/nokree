@@ -1,0 +1,16 @@
+!!!
+%html
+	%head
+		= stylesheet_link_tag 'screen'
+		= stylesheet_link_tag 'print'
+
+	%title Nokree
+	%body
+		#header
+		#body-top
+		#content-border
+			#content-window
+				#page-title
+					= image_tag 'jobforrest.png', :width=>"200px"
+				= yield
+		#footer					
