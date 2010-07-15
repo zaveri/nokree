@@ -1,0 +1,52 @@
+<% form_for(@listing) do |listing_form| %>
+	<%= listing_form.error_messages%>
+	
+	<p>
+		<%= listing_form.label :kind %><br/>
+		<%= listing_form.text_field :kind%>
+	</p>
+	<h2>Company Information</h2>
+	<% listing_form.fields_for :company do |company_form| %>
+		<p>
+			<%= company_form.label :name %>
+			<%= company_form.text_field :name %>
+		<p>
+			<%= company_form.label :url %>
+			<%= company_form.text_field :url %>
+		<p>
+		<p>
+			<%= company_form.label :email %>
+			<%= company_form.text_field :email %>
+		</p>
+	<%end%>
+	<h2> Job Information </h2>
+	<% listing_form.fields_for :job do |job_form| %>
+		<p>
+			<%= job_form.label :location %>
+			<%= job_form.text_field :location %>
+		</p>
+		<p>
+			<%= job_form.label :position %>
+			<%= job_form.text_field :position %>
+		</p>
+		<p>
+			<%= job_form.label :category %>
+			<%= job_form.select("category_id", Category.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
+		</p>
+		<p>
+			<%= job_form.label :perks %><br/>
+			<%= job_form.text_area :perks %>			
+		</p>
+		<p>
+			<%= job_form.label :description %><br/>
+			<%= job_form.text_area :description %>
+		</p>
+		<p>
+			<%= job_form.label :how %><br/>
+			<%= job_form.text_area :how %>
+		</p>
+	<% end %>
+		<p>
+	<%= listing_form.submit 'Save' %>
+		</p>	
+<% end %>

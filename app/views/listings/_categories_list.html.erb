@@ -1,0 +1,5 @@
+<% form_tag filter_by_category_listings_path do %>
+	<% @categories.each do |category|%>
+		category_list_item(category, @selected_categories)
+	<% end %>
+<% end %>
