@@ -1,0 +1,9 @@
+<% form_for (@kind) do |f| %>
+	<%=f.error_messages%>
+	
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	
+	<%= f.submit "Create" %>
+	
+<% end %>

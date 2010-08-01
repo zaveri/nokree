@@ -3,7 +3,7 @@
 	
 	<p>
 		<%= listing_form.label :kind %><br/>
-		<%= listing_form.text_field :kind%>
+		<%= listing_form.select( "kind_id", Kind.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
 	</p>
 	<h2>Company Information</h2>
 	<% listing_form.fields_for :company do |company_form| %>

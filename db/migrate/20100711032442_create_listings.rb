@@ -1,7 +1,7 @@
 class CreateListings < ActiveRecord::Migration
   def self.up
     create_table :listings do |t|
-      t.string :kind
+      t.integer :kind_id
 
       t.timestamps
     end

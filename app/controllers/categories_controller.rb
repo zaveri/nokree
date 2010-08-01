@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+  before_filter :login_required
+  before_filter :is_admin
+  
   def index
     @categories = Category.find(:all)
   end
@@ -36,5 +39,4 @@ class CategoriesController < ApplicationController
       redirect_to edit_category_path
     end
   end
-  
 end
