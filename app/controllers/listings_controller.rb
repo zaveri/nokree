@@ -6,6 +6,10 @@ class ListingsController < ApplicationController
     @listings = Listing.find(:all)
     @selected_categories = @categories.map{|category| category.name} if @selected_categories.blank?
   end
+  
+  def show
+    @listing = Listing.find(params[:id])
+  end
     
   def new
     @listing = Listing.new
