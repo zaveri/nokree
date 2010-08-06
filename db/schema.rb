@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20100731041912) do
 
   create_table "listings", :force => true do |t|
     t.integer  "kind_id"
+    t.datetime "start"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

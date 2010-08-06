@@ -2,6 +2,7 @@ class CreateListings < ActiveRecord::Migration
   def self.up
     create_table :listings do |t|
       t.integer :kind_id
+      t.datetime :start
 
       t.timestamps
     end
