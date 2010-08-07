@@ -46,5 +46,40 @@ class Listing < ActiveRecord::Base
       return true
     end
   end
+  
+  # returns date month and day
+  def get_month(month)
+    if month == 1
+      return "Jan"
+    elsif month == 2
+      return "Feb"
+    elsif month == 3
+      return "Mar"
+    elsif month == 4
+      return "Apr"
+    elsif month == 5
+      return "May"
+    elsif month == 6
+      return "Jun"
+    elsif month == 7
+      return "Jul"
+    elsif month == 8
+      return "Aug"
+    elsif month == 9
+      return "Sep"
+    elsif month == 10
+      return "Oct"
+    elsif month == 11
+      return "Nov"
+    else
+      return "Dec"
+    end
+  end
+    
+  def listing_date
+    in_array = self.start.to_a[3]
+    month = get_month(self.start.to_a[4])
+    return "#{month} #{in_array}"
+  end
     
 end

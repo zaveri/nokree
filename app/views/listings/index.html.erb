@@ -181,10 +181,10 @@
               <tbody>
 					<% @listings.each do |listing| %>
 	                <tr>
-                  <td class="opening"><span class="new">New!</span> <%= link_to "#{listing.job.position}", listing_path(listing) %><span class="at">at</span> <span class="company"><%= listing.company.name%></span></td>
+                  <td class="opening"><%if listing.recent_new%><span class="new">New!</span><% end %><%= link_to "#{listing.job.position}", listing_path(listing) %><span class="at">at</span> <span class="company"><%= listing.company.name%></span></td>
 
                   <td class="locale"><span class="location"><%= listing.job.location%></span> <span class="type freelance">Freelance</span></td>
-                  <td class="posted"></td>
+                  <td class="posted"><%=listing.listing_date%></td>
                 </tr>
 	                <tr class="even">
                   <td class="opening"><a href="/jobs/5915"><span class="new">New!</span> Rockstar WordPress Developer (Unique Opportunity)</a> <span class="at">at</span> <span class="company">EngageSciences</span></td>
