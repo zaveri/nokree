@@ -146,9 +146,10 @@ body{
 	clear : both;
 }
 #ad-box{
+	@include pretty-text;
 	@include centered;
 	width : 95%;
-	background-color : darken($highlight, 5%);
+	background-color : $sand;
 	height : 300px;
 	text-align : center;
 }

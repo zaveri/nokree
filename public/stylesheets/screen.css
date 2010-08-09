@@ -64,7 +64,7 @@ a img {
 
 /* line 47, ../src/screen.scss */
 body {
-  font-family: Lucida, "Helvetica Neue" Arial Arial;
+  font-family: "Helvetica Neue" Arial Arial;
   font-size: 20px;
   background-color: #46914f;
 }
@@ -273,9 +273,17 @@ h6 {
 
 /* line 148, ../src/screen.scss */
 #ad-box {
+  font-family: "Helvetica Neue" Arial Arial;
+  font-size: 20px;
   margin: 0px auto;
   width: 95%;
-  background-color: #b6cbc6;
+  background-color: #e2deac;
   height: 300px;
   text-align: center;
+}
+/* line 12, ../src/screen.scss */
+#ad-box p {
+  padding: 5;
+  line-height: 1.3em;
+  font-weight: 200;
 }
