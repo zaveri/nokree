@@ -135,12 +135,12 @@ h6 {
 
 /* line 67, ../src/screen.scss */
 .highlight_even {
-  background-color: #c5d6d2;
+  background-color: #f6f5e5;
 }
 
 /* line 70, ../src/screen.scss */
 .highlight_odd {
-  background-color: #dbe6e3;
+  background-color: #e2deac;
 }
 
 /* line 73, ../src/screen.scss */
@@ -289,14 +289,14 @@ h6 {
   margin: 0px auto;
   text-align: center;
   width: 85%;
-  background-color: #e2deac;
+  background-color: #a0c4a4;
   height: 300px;
 }
 
 /* line 168, ../src/screen.scss */
 #search-box {
   width: 533.333px;
-  background-color: #d6c5c9;
+  background-color: #c4a0c0;
   height: 100px;
 }
 
@@ -309,4 +309,31 @@ h6 {
   text-align: center;
   font-size: 30px;
   color: #393939;
+}
+
+/* line 182, ../src/screen.scss */
+#filter-box {
+  width: 533.333px;
+  background-color: #bfd8c2;
+  text-align: center;
+  height: 100px;
+}
+/* line 187, ../src/screen.scss */
+#filter-box form {
+  padding: 20px;
+}
+
+/* line 191, ../src/screen.scss */
+#listing-title {
+  width: 533.333px;
+  height: 75px;
+  color: #c5c5c5;
+  background-color: #353535;
+}
+/* line 195, ../src/screen.scss */
+#listing-title h1, #listing-title h2, #listing-title h3, #listing-title h4, #listing-title h5, #listing-title h6 {
+  position: relative;
+  text-align: center;
+  font-weight: 100;
+  top: 10px;
 }

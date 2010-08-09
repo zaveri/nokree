@@ -65,10 +65,10 @@ body{
 	}
 }
 .highlight_even{
-	background-color: $highlight;
+	background-color: lighten($sand, 15%);
 }
 .highlight_odd{
-	background-color: lighten($highlight, 7.5%);
+	background-color: $sand;
 }
 #header {
 	width: 100%;
@@ -162,7 +162,7 @@ body{
 	@include centered;
 	text-align : center;
 	width : 85%;
-	background-color : $sand;
+	background-color : $highlight;
 	height : 300px;
 }
 #search-box{
@@ -179,3 +179,25 @@ body{
 	font-size : $base-font-size * 1.5;
 	color : darken($light-font, 70%);
 }
+#filter-box{
+	width : 2 * ($page-width / 3);
+	background-color : lighten($highlight,10%);
+	text-align : center;
+	height : 100px;
+	form {
+		padding : 20px;
+	}
+}
+#listing-title{
+	width : 2 * ($page-width / 3);
+	height : 75px;
+	color : darken($light-font, 15%);
+	h1,h2,h3,h4,h5,h6 {
+		position : relative;
+		text-align : center;
+		font-weight : 100;
+		top : 10px;
+	}
+	background-color : lighten($dark-background, 10%);
+}
+	
