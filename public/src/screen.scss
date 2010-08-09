@@ -74,6 +74,7 @@ body{
 #footer {
 	@include light-on-dark;
 	width : 100%;
+	color : darken($light-font, 50%);
 	height : $footer-height;
 	text-align : center;
 	h1,h2,h3,h4,h5,h6,p { padding : 20px; }
