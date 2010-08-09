@@ -36,6 +36,10 @@
 	padding-right : $i;
 	padding-left : $i;
 }
+@mixin side-margin($i){
+	margin-left : $i;
+	margin-right : $i;
+}
 @mixin padding($i) { padding: $i * 5; }
 @mixin centered {
 	margin : 0px auto;
@@ -155,10 +159,23 @@ body{
 	clear : both;
 }
 #ad-box{
-	@include pretty-text;
 	@include centered;
 	text-align : center;
 	width : 85%;
 	background-color : $sand;
 	height : 300px;
+}
+#search-box{
+	width : 2 * ($page-width / 3);
+	background-color : complement($highlight);
+	height : 100px;
+}
+#search-box input{
+	position : relative;
+	top : 27px;
+	left : 0.18 * ($page-width / 3);
+	width : 1.6 * ($page-width / 3);
+	text-align : center;
+	font-size : $base-font-size * 1.5;
+	color : darken($light-font, 70%);
 }

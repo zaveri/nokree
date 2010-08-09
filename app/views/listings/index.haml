@@ -1,5 +1,8 @@
 #listings
 	%br
+	#search-box
+		%input{:value => "Search great jobs"}
+	%br
 	- @listings.each_index do |i|
 		- l = @listings[i]
 		- if i % 2 == 0
