@@ -1,10 +1,11 @@
 #listings
+	%br
 	- @listings.each_index do |i|
 		- l = @listings[i]
 		- if i % 2 == 0
-			- classs = ""
+			- classs = "highlight_odd"
 		- else
-			- classs = "highlight"
+			- classs = "highlight_even"
 		#listing{:class => "#{classs}"}
 			%h5 
 				= link_to l.job.position, :controller => :listings, :action => :show, :id => l.id

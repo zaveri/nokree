@@ -18,13 +18,10 @@
 @mixin light-on-dark {
 	color: $light-font;
 	background-color: $dark-background;
-	h1,h2,h3 { color : darken($light-font, 10%); }
 }
-
 @mixin dark-on-light {
 	color : $dark-font;
 	background-color : $content-background;
-	h1,h2,h3 { color : lighten($dark-font, 10%); }
 }
 
 @mixin side-border($w,$c) {
@@ -63,8 +60,11 @@ body{
 		font-size : 100% + (6 - $i) * 125% / 5;
 	}
 }
-.highlight{
+.highlight_even{
 	background-color: $highlight;
+}
+.highlight_odd{
+	background-color: lighten($highlight, 7.5%);
 }
 #header {
 	width: 100%;
@@ -72,8 +72,11 @@ body{
 	background-color : $dark-background;
 }
 #footer {
+	@include light-on-dark;
 	width : 100%;
 	height : $footer-height;
+	text-align : center;
+	h1,h2,h3,h4,h5,h6,p { padding : 20px; }
 }
 #content-window {
 	@include centered;
@@ -130,6 +133,7 @@ body{
 		float : right;
 		right : 10px;
 		top : 3px;
+		font-variant : small-caps;
 	}
 	p {
 		float : left;
@@ -148,8 +152,8 @@ body{
 #ad-box{
 	@include pretty-text;
 	@include centered;
-	width : 95%;
+	text-align : center;
+	width : 85%;
 	background-color : $sand;
 	height : 300px;
-	text-align : center;
 }
