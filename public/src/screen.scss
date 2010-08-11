@@ -168,15 +168,15 @@ body{
 #search-box{
 	width : 2 * ($page-width / 3);
 	background-color : complement($highlight);
-	height : 100px;
+	height : 50px;
 }
 #search-box input{
 	position : relative;
-	top : 27px;
+	top : 7px;
 	left : 0.18 * ($page-width / 3);
 	width : 1.6 * ($page-width / 3);
 	text-align : center;
-	font-size : $base-font-size * 1.5;
+	font-size : $base-font-size * 1.1;
 	color : darken($light-font, 70%);
 }
 #filter-box{
@@ -190,13 +190,13 @@ body{
 }
 #listing-title{
 	width : 2 * ($page-width / 3);
-	height : 75px;
+	height : 55px;
 	color : darken($light-font, 15%);
 	h1,h2,h3,h4,h5,h6 {
 		position : relative;
 		text-align : center;
 		font-weight : 100;
-		top : 10px;
+		top : 0px;
 	}
 	background-color : lighten($dark-background, 10%);
 }
