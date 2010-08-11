@@ -13,16 +13,23 @@ class ListingsController < ApplicationController
     
   def new
     @listing = Listing.new
+    @preview = false
     @listing.build_company
     @listing.build_job
   end
   
   def create
-    @listing = Listing.new(params[:listing])
-    if @listing.save
-      redirect_to(listing_path(@listing))
+    if params[:commit] == "Create"
+      @listing = Listing.new(params[:listing])
+      if @listing.save
+        redirect_to(listing_path(@listing))
+      else
+        render(:action => :new)
+      end
     else
-      render(:action => :new)
+      @listing = Listing.new(params[:listing])
+      @preview = true
+      render :action => :new
     end
   end
   

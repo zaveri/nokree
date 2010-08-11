@@ -1,4 +1,6 @@
-
+<% if @preview == true%>
+ <%= "--------------------------------------Preview Mode Finished------------------------------------"%>
+<% end %>
 <% form_for(@listing) do |listing_form| %>
 	<%= listing_form.error_messages%>
 	
@@ -49,6 +51,11 @@
 		</p>
 	<% end %>
 		<p>
-	<%= listing_form.submit 'Save' %>
+	<%if @preview == true %>
+		<%= listing_form.submit 'Create' %>
+		<% else %>
+			<%= listing_form.submit 'Preview' %>
+	<% end %>
+	
 		</p>	
 <% end %>
