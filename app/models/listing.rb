@@ -1,5 +1,6 @@
 class Listing < ActiveRecord::Base
-  has_one :company
+  acts_as_ferret :fields => [:position]
+	has_one :company
   has_one :job
   belongs_to :kind
   accepts_nested_attributes_for :company, :job
