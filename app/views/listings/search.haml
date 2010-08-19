@@ -6,7 +6,7 @@
 	#search-box
 		%input{:value => "Search jobs"}
 	#filter-box
-		- form_for :search, :url => { :controller => "listings", :action => "search"}, :method => "post" do
+		%form{:controller => "listings", :action => "search", :method => "post"}
 			%input{:type => "radio"}
 				Engineering
 			%input{:type => "radio"}
@@ -17,7 +17,7 @@
 				Consulting
 			%br
 			%br
-			%input{:name => "search",:type => "submit", :value=>"Filter"}
+			%input{:type => "submit", :value=>"Filter"}
 	%br
 	#listing-title
 		%h3

@@ -47,11 +47,16 @@ class ListingsController < ApplicationController
     @listing.destroy
     redirect_to listings_path
   end
-  
+
+	def search
+		@listings = Listing.find_with_ferret(params[:search])
+ 	end
+ 
   private
   
   def find_all_categories
     Category.find(:all)
   end
+
 
 end
