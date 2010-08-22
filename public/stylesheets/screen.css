@@ -242,18 +242,19 @@ h6 {
 #page-title {
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 900px;
 }
-/* line 132, ../src/screen.scss */
+/* line 133, ../src/screen.scss */
 #page-title img {
   float: left;
 }
-/* line 133, ../src/screen.scss */
+/* line 134, ../src/screen.scss */
 #page-title h1 {
   text-align: center;
   font-size: 64px;
   font-weight: 100;
 }
-/* line 138, ../src/screen.scss */
+/* line 139, ../src/screen.scss */
 #page-title h2 {
   color: #ebebeb;
   background-color: #1b1b1b;
@@ -265,7 +266,7 @@ h6 {
   font-weight: 100;
 }
 
-/* line 148, ../src/screen.scss */
+/* line 149, ../src/screen.scss */
 #listings {
   color: #111111;
   background-color: #e9e9e9;
@@ -273,16 +274,16 @@ h6 {
   width: 600px;
 }
 
-/* line 153, ../src/screen.scss */
+/* line 154, ../src/screen.scss */
 #listing {
   padding-right: 10px;
   padding-left: 10px;
 }
-/* line 155, ../src/screen.scss */
+/* line 156, ../src/screen.scss */
 #listing h5 {
   float: left;
 }
-/* line 158, ../src/screen.scss */
+/* line 159, ../src/screen.scss */
 #listing h6 {
   position: relative;
   float: right;
@@ -290,27 +291,27 @@ h6 {
   top: 3px;
   font-variant: small-caps;
 }
-/* line 165, ../src/screen.scss */
+/* line 166, ../src/screen.scss */
 #listing p {
   float: left;
 }
 
-/* line 169, ../src/screen.scss */
+/* line 170, ../src/screen.scss */
 #side-nav {
   float: left;
   width: 300px;
 }
-/* line 170, ../src/screen.scss */
+/* line 171, ../src/screen.scss */
 #side-nav h1, #side-nav h2, #side-nav h3, #side-nav h4, #side-nav h5, #side-nav h6 {
   text-align: center;
 }
 
-/* line 176, ../src/screen.scss */
+/* line 177, ../src/screen.scss */
 #clear {
   clear: both;
 }
 
-/* line 179, ../src/screen.scss */
+/* line 180, ../src/screen.scss */
 #ad-box {
   margin: 0px auto;
   text-align: center;
@@ -319,14 +320,14 @@ h6 {
   height: 300px;
 }
 
-/* line 186, ../src/screen.scss */
+/* line 187, ../src/screen.scss */
 #search-box {
   width: 600px;
   background-color: #c4a0c0;
   height: 50px;
 }
 
-/* line 191, ../src/screen.scss */
+/* line 192, ../src/screen.scss */
 #search-box input {
   position: relative;
   top: 7px;
@@ -337,26 +338,26 @@ h6 {
   color: #393939;
 }
 
-/* line 200, ../src/screen.scss */
+/* line 201, ../src/screen.scss */
 #filter-box {
   width: 600px;
   background-color: #bfd8c2;
   text-align: center;
   height: 100px;
 }
-/* line 205, ../src/screen.scss */
+/* line 206, ../src/screen.scss */
 #filter-box form {
   padding: 20px;
 }
 
-/* line 209, ../src/screen.scss */
+/* line 210, ../src/screen.scss */
 #listing-title {
   width: 600px;
   height: 55px;
   color: #c5c5c5;
   background-color: #353535;
 }
-/* line 213, ../src/screen.scss */
+/* line 214, ../src/screen.scss */
 #listing-title h1, #listing-title h2, #listing-title h3, #listing-title h4, #listing-title h5, #listing-title h6 {
   position: relative;
   text-align: center;

@@ -81,7 +81,7 @@ html,body{
 	float : left;
 }
 #header {
-	width: 100%;
+	width : 100%;
 	height: $header-height;
 	background-color : $dark-background;
 }
@@ -129,6 +129,7 @@ html,body{
 }
 #page-title{
 	@include height-pad(10px);
+	width : $page-width;
 	img { float : left; }
 	h1{
 		text-align : center;
