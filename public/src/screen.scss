@@ -82,6 +82,7 @@ html,body{
 }
 #header {
 	width : 100%;
+	min-width: 1000px;
 	height: $header-height;
 	background-color : $dark-background;
 }
@@ -92,6 +93,7 @@ html,body{
 	@include light-on-dark;
 	position : relative;
 	width : 100%;
+	min-width: 1000px;
 	color : darken($light-font, 50%);
 	height : $footer-height;
 	top : -100px;
