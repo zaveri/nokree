@@ -45,9 +45,13 @@
 	margin : 0px auto;
 }
 
-body{
+html,body{
 	@include pretty-text;
 	background-color : $primary-background;
+	height : 100%;
+	min-height : 100%;
+	padding : 0;
+	margin : 0;
 }
 #body-top{
 	position:absolute;
@@ -64,22 +68,34 @@ body{
 		font-size : 100% + (6 - $i) * 125% / 5;
 	}
 }
+.center {
+	text-align : center;
+}
 .highlight_even{
 	background-color: lighten($sand, 15%);
 }
 .highlight_odd{
 	background-color: $sand;
 }
+.highlight_even p, .highlight_odd p {
+	float : left;
+}
 #header {
 	width: 100%;
 	height: $header-height;
 	background-color : $dark-background;
 }
+#header img{
+	@include side-pad(90px);
+}
 #footer {
 	@include light-on-dark;
+	position : relative;
 	width : 100%;
 	color : darken($light-font, 50%);
 	height : $footer-height;
+	top : -100px;
+	clear : both;
 	text-align : center;
 	h1,h2,h3,h4,h5,h6,p { padding : 20px; }
 }
@@ -87,12 +103,14 @@ body{
 	@include centered;
 	@include dark-on-light;
 	@include side-border($border-width,darken($content-background,2%));
+	position : relative;
+	top : -100px;
 	p, h1, h2, h3, h4 { 
 		@include side-pad(2px); 
 		@include height-pad(10px);
 	}
 	width : $page-width;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 }
 #content-border{
 	@include centered;
@@ -118,14 +136,14 @@ body{
 		font-weight : 100;
 	}
 	h2{
+		@include light-on-dark;
 		position : relative;
-		top : 15px;
-		right : 80px;
+		top : 30px;
+		right : 150px;
 		float : right;
 		font-size : $base-font-size * 1.7;
 		font-weight : 100;
 	}
-	border-bottom: 1px solid #A3A3A3;
 }
 #listings{
 	@include dark-on-light;

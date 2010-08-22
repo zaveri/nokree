@@ -49,7 +49,11 @@ class ListingsController < ApplicationController
   end
 
 	def search
-		@listings = Listing.find_with_ferret(params[:search])
+	  if params[:search]
+		  @listings = Listing.find_with_ferret(params[:search]).to_a
+ 	  else
+ 	    @listings = Listing.all
+    end
  	end
  
   private

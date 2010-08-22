@@ -7,13 +7,14 @@
 	%title JobForrest | Find jobs for Virginia Grads
 	%body
 		#header
+			#page-title
+				=link_to "#{image_tag 'jobforrest_white.png',:width=>"300px"}", root_url
+				%h2 Find jobs for Virginia grads
+				#clear
 		#body-top
 		#content-border
 			#content-window
-				#page-title
-					=link_to "#{image_tag 'jobforrest.png',:width=>"300px"}", root_url
-					%h2 Find jobs for Virginia grads
-					#clear
 				= yield
 		#footer			
-			%h6 Copyright JobForrest 2010		
+			%h6 Copyright JobForrest 2010
+			#clear		
