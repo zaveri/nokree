@@ -86,9 +86,6 @@ html,body{
 	height: $header-height;
 	background-color : $dark-background;
 }
-#header img{
-	@include side-pad(90px);
-}
 #footer {
 	@include light-on-dark;
 	position : relative;
@@ -132,6 +129,7 @@ html,body{
 #page-title{
 	@include height-pad(10px);
 	width : $page-width;
+	margin : 0px auto;
 	img { float : left; }
 	h1{
 		text-align : center;
@@ -146,6 +144,9 @@ html,body{
 		float : right;
 		font-size : $base-font-size * 1.7;
 		font-weight : 100;
+	}
+	img{
+		@include side-pad(20px);
 	}
 }
 #listings{
