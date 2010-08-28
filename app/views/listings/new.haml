@@ -1,0 +1,30 @@
+%br
+-if @preview == true
+	%h5
+		= "You are currently in Preview Mode if you are satisfied with the way your listing appears proceed to click"
+	%h5
+		= link_to 'Back to Listings', listings_url
+	%hr
+	%h3 
+		= @listing.name
+	%h5
+		Employer:
+		= @listing.company
+	%h5
+		Location:
+		= @listing.location
+
+	%h5 Job Perks:
+	%p	
+		= @listing.perks
+
+	%h5 Description:
+	%p
+		= @listing.description
+
+	%h5 How to apply:
+	%p
+		= @listing.how
+	%h4 End of Preview Mode
+	%hr
+= render :partial => 'form'

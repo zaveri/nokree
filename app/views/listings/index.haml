@@ -1,0 +1,39 @@
+#listings
+	%br
+	%h6
+		This is a welcome message of some variety. Maybe a banner of description, or whatever. 
+		Something that provides a bit of space above the job listing head. If this looks utterly
+		terrible, take a look at the screenshot I checked in.
+	%br
+	#listing-title
+		%h3
+			Job Listings
+	- @listings.each_index do |i|
+		- l = @listings[i]
+		- if i % 2 == 0
+			- classs = "highlight_odd"
+		- else
+			- classs = "highlight_even"
+		#listing{:class => "#{classs}"}
+			%h5 
+				= link_to l.name, :controller => :listings, :action => :show, :id => l.id
+			%h6
+				= l.company
+			%p
+				= l.description
+			#clear
+	%br
+	%h6.center 
+		Can't find what you are looking for, try a
+		= link_to 'search', :controller => 'listings', :action => 'search'
+#side-nav
+	%br
+	#ad-box
+		%h5 Side-bar goes here
+		%p Content and whatnot
+	%br
+	%br
+	#ad-box
+		%h5 Advertisements and more...
+		%p Pictures or whatever
+#clear

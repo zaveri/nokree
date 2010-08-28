@@ -1,0 +1,27 @@
+$ideal-font : Lucida, "Helvetica Neue" Arial;
+$alt-font : Arial;
+$base-font-size : 20px;
+$readable-weight : 200;
+
+$light-font : #E7D937;
+$light-font : #FFF188;
+$light-font : #9EE29B;
+$dark-font : #111;
+$dark-background : #1B1B1B;
+$light-background : #E2E1E1;
+$content-background : #E9E9E9;
+$primary-background : #CC3F32;
+$primary-background : #46914F;
+
+$page-width : 600px;
+$header-height : 30px;
+$footer-height : 0px;
+
+$border-width : 30px;
+$border-color : #D8D7D4;
+
+@import "compass/reset";
+@import "compass";
+
+
+

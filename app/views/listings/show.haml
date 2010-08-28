@@ -1,0 +1,25 @@
+%h5
+	= link_to 'Back to Listings', listings_url
+%hr
+%h3 
+	= @listing.name
+%h5
+	Employer:
+	= @listing.company
+%h5
+	Location:
+	= @listing.location
+
+%h5 Job Perks:
+%p	
+	= @listing.perks
+
+%h5 Description:
+%p
+	= @listing.description
+
+%h5 How to apply:
+%p
+	= @listing.how
+%h5
+	= link_to 'Delete', listing_path, :method => 'delete'
