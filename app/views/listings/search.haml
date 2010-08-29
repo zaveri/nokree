@@ -4,20 +4,11 @@
 		%h3
 			Search &amp; Filter
 	#search-box
-		%input{:value => "Search jobs"}
-	#filter-box
-		%form{:controller => "listings", :action => "search", :method => "post"}
-			%input{:type => "radio"}
-				Engineering
-			%input{:type => "radio"}
-				Software
-			%input{:type => "radio"}
-				Startups
-			%input{:type => "radio"}
-				Consulting
-			%br
-			%br
-			%input{:type => "submit", :value=>"Filter"}
+		- form_for @search, :url => url_for({ :controller => 'listings', :action => 'search' }) , :method => :post do |f|
+			= f.text_field :name_contains, :value => 'Search on Job Name', :class => :ajax
+			= f.text_field :description_contains, :value => "Search on Job Description", :class => :ajax
+			= f.submit
+		#clear
 	%br
 	#listing-title
 		%h3
@@ -30,11 +21,11 @@
 			- classs = "highlight_even"
 		#listing{:class => "#{classs}"}
 			%h5 
-				= link_to l.job.position, :controller => :listings, :action => :show, :id => l.id
+				= link_to l.name, :controller => :listings, :action => :show, :id => l.id
 			%h6
-				= l.company.name
+				= l.company
 			%p
-				= l.job.description
+				= l.description
 			#clear
 #side-nav
 	%br

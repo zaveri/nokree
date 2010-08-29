@@ -326,10 +326,9 @@ h6 {
 #search-box {
   width: 600px;
   background-color: #c4a0c0;
-  height: 50px;
 }
 
-/* line 195, ../src/screen.scss */
+/* line 194, ../src/screen.scss */
 #search-box input {
   position: relative;
   top: 7px;
@@ -340,26 +339,26 @@ h6 {
   color: #393939;
 }
 
-/* line 204, ../src/screen.scss */
+/* line 203, ../src/screen.scss */
 #filter-box {
   width: 600px;
   background-color: #bfd8c2;
   text-align: center;
   height: 100px;
 }
-/* line 209, ../src/screen.scss */
+/* line 208, ../src/screen.scss */
 #filter-box form {
   padding: 20px;
 }
 
-/* line 213, ../src/screen.scss */
+/* line 212, ../src/screen.scss */
 #listing-title {
   width: 600px;
   height: 55px;
   color: #c5c5c5;
   background-color: #353535;
 }
-/* line 217, ../src/screen.scss */
+/* line 216, ../src/screen.scss */
 #listing-title h1, #listing-title h2, #listing-title h3, #listing-title h4, #listing-title h5, #listing-title h6 {
   position: relative;
   text-align: center;
