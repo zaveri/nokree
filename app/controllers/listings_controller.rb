@@ -94,5 +94,10 @@ class ListingsController < ApplicationController
  	  #else
  	   # @listings = Listing.all
 		#end
+    respond_to do |format|
+      format.html # show.html.erb
+			format.js { render :layout => false }
+    end
 	end
+	
 end

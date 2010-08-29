@@ -4,29 +4,14 @@
 		%h3
 			Search &amp; Filter
 	#search-box
-		- form_for @search, :url => url_for({ :controller => 'listings', :action => 'search' }) , :method => :post do |f|
+		- form_for @search, :url => url_for({ :controller => 'listings', :action => 'search' }) , :method => :post, :remote => :true do |f|
 			= f.text_field :name_contains, :value => 'Search on Job Name', :class => :ajax
 			= f.text_field :description_contains, :value => "Search on Job Description", :class => :ajax
 			= f.submit
 		#clear
 	%br
-	#listing-title
-		%h3
-			Job Listings
-	- @listings.each_index do |i|
-		- l = @listings[i]
-		- if i % 2 == 0
-			- classs = "highlight_odd"
-		- else
-			- classs = "highlight_even"
-		#listing{:class => "#{classs}"}
-			%h5 
-				= link_to l.name, :controller => :listings, :action => :show, :id => l.id
-			%h6
-				= l.company
-			%p
-				= l.description
-			#clear
+	#results
+		= render 'listings'
 #side-nav
 	%br
 	#ad-box

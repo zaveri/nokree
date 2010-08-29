@@ -1,0 +1,17 @@
+#listing-title
+	%h3
+		Job Listings
+- @listings.each_index do |i|
+	- l = @listings[i]
+	- if i % 2 == 0
+		- classs = "highlight_odd"
+	- else
+		- classs = "highlight_even"
+	#listing{:class => "#{classs}"}
+		%h5 
+			= link_to l.name, :controller => :listings, :action => :show, :id => l.id
+		%h6
+			= l.company
+		%p
+			= l.description
+		#clear
