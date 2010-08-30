@@ -191,14 +191,18 @@ html,body{
 	width : 2 * ($page-width / 3);
 	background-color : complement($highlight);
 }
-#search-box input{
+#search-box #submit{
+	padding-top:15px;	
+	padding-bottom:10px;
+	text-align: center;
+}
+#search-box .ajax{
 	position : relative;
 	top : 7px;
 	left : 0.18 * ($page-width / 3);
 	width : 1.6 * ($page-width / 3);
-	text-align : center;
 	font-size : $base-font-size * 1.1;
-	color : darken($light-font, 70%);
+	color : darken($light-font, 50%);
 }
 #filter-box{
 	width : 2 * ($page-width / 3);

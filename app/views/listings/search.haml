@@ -2,12 +2,15 @@
 	%br
 	#listing-title
 		%h3
-			Search &amp; Filter
+			Search Listings
 	#search-box
 		- form_for @search, :url => url_for({ :controller => 'listings', :action => 'search' }) , :method => :post, :remote => :true do |f|
+			%br
 			= f.text_field :name_contains, :value => 'Search on Job Name', :class => :ajax
 			= f.text_field :description_contains, :value => "Search on Job Description", :class => :ajax
-			= f.submit
+			%br
+			#submit	
+				= f.submit :value => 'Search'
 		#clear
 	%br
 	#results
